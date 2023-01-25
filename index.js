@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict"
 
 let numOrStr = prompt('input number or string');
@@ -15,3 +16,22 @@ switch (true) {
     default:
         console.log('OK!');
 }
+=======
+"use strict"
+
+let numOrStr = prompt('input number or string');
+
+switch (true) {
+    case (numOrStr === null):
+        console.log('Ви скасували');
+        break;
+    case (numOrStr.trim() === ''):
+        console.log('Empty String');
+        break;
+    case (isNaN(+numOrStr)):
+        console.log('number is Ba_NaN');
+        break;
+    default:
+        console.log('OK!');
+}
+>>>>>>> 080d33618dd3e2a9bae33ab363abc025d7d46400
