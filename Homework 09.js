@@ -123,13 +123,17 @@ let row = '';
 {
     for (let i = 1; i < 11; i++) {
         for (let j = 1; j < 11; j++) {
-            row += (j * i) + " ";
+            row += (j * i) + "\t";
         }
         console.log(row);
-        row = '';
+        row = "";
+
     }
 
 }
+
+
+
 
 
 
