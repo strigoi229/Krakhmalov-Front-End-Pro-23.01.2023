@@ -56,19 +56,22 @@ let users = [
     }
 ]
 //Вивести масив телефонних номерів користувачів, у яких баланс більше 2000 доларів
-let condition = "$2,000.00";
+let condition = "2000.00";
 let phones = [];
+let correntBalance = "";
 for (let item of users) {
     for (let obj in item) {
-        if ((obj == "balance") && (item.balance > condition)) {
-            phones.push(item.phone);
-        } else {
-            continue;
+        if (obj == "balance") {
+            correntBalance = item.balance;
+            correntBalance = correntBalance.replace(/[^0-9-.]/g, "")
+            if (+correntBalance > +condition) {
+                phones.push(item.phone)
+
+            }
         }
     }
 }
 console.log(phones);
-
 
 // Знайти суму всіх балансів користувачів
 let dollars = [];
