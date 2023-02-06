@@ -1,19 +1,18 @@
 "use strict"
-let arr = [];
-for (let i = 1; i < 11; i++) {
-    arr.push(i);
-}
+//Реалізуйте функцію removeElement(array, item), щоб видалити елемент item з масиву array.
+let arr = ["j", 3, "s", "v", 412, "a", "script", false];
 console.log(arr);
+let result = 0;
 function removeElement(array, item) {
-    array = array.splice(item, 1);
+    result = array.indexOf(item);
+    if (result == -1) {
+        console.log("element not found");
+    } else {
+        array = array.splice(result, 1)
+    }
 }
-//Видалити п'ятий елемент з масиву, тобто елемент з індексом 5.
-// Або якщо треба видалити не по індексу, а саме по номеру елемента, то вказати: array = array.splice(--item, 1);
-removeElement(arr, 5);
-console.log(arr);
-
-
-
+removeElement(arr, "s");
+console.log(arr)
 
 
 
