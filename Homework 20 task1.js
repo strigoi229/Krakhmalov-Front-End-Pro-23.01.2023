@@ -57,12 +57,12 @@ let users = [
 ]
 function mapping(array, callback) {
     let newArray = [];
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) { // Виправив
         newArray.push(callback(array[i], i));
     }
     return console.log(newArray);
 }
-mapping(users, (item) => {
+mapping(users, (item) => { // Все працює, тепер розумію в якій формі аргумент слід передавати в мою функцію. ДЯКУЮ)
     return item.name
 })
 
