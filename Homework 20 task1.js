@@ -55,23 +55,16 @@ let users = [
         "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
 ]
-let newArray = [];
 function mapping(array, callback) {
-    for (let i = 0; i < array.lenght; i++) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
         newArray.push(callback(array[i], i));
     }
     return console.log(newArray);
-} // Я думаю що це виглядає якось так, але як це має працювати я не можу зрозуміти, що саме слід вставити в callback щоб воно запрацювало.
-
-function add(element, index, array) { // Чи  треба створювати якусь таку функцію, шоб передати її як аргумент callback?
-    return element += 1;
 }
-
-
-mapping(users, ???) // Я не розумію, що сюди треба вставити, нічого не працює, напряму стрілочка функція також нічого не робить.
-
-
-
+mapping(users, (item) => {
+    return item.name
+})
 
 
 
