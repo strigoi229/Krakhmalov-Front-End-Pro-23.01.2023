@@ -1,6 +1,6 @@
 "use strict";
 // Як на мене код доволі простий, всі потрібні теги додаємо в змінну list і все, вона в кінці містить наш сформований список.
-function generateList(array) {
+function createList(array) {
   let list = "<ul>";
   let num = 0; // Число потрібне для нумерації вкладених масивів(Якщо треба як в умові 1.1 1.2 1.3)
   for (let item of array) {
@@ -21,4 +21,4 @@ function generateList(array) {
 
 let arr = [1, 2, 3, [1, 2, 3], 4, 5, [1, 2, 3], 6, 7];
 
-generateList(arr);
+createList(arr);
